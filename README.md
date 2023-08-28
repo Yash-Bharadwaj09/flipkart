@@ -1,2 +1,2 @@
 # flipkart
-Flipkart Sxcreens
+Flipkart Screens
