@@ -1,4 +1,6 @@
+import 'package:flipkart/src/presentation/views/choose_language/choose_language.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class PhoneLogin extends StatelessWidget {
@@ -8,6 +10,27 @@ class PhoneLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Row(
+          children: [
+            const Text(
+              'Flipkart',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(
+              width: 4.0,
+            ),
+            SvgPicture.asset(
+              "assets/flipkart.svg",
+              height: 20,
+              width: 20,
+              color: Colors.yellow,
+            ),
+          ],
+        ),
         backgroundColor: Colors.blue.shade700,
         leading: IconButton(
           icon: const Icon(
@@ -15,10 +38,7 @@ class PhoneLogin extends StatelessWidget {
             size: 18,
             color: Colors.white,
           ),
-          onPressed: () {
-            // Navigator.pop(context,
-            //     MaterialPageRoute(builder: (context) => Classname()));
-          },
+          onPressed: () {},
         ),
       ),
       body: SingleChildScrollView(
@@ -139,12 +159,19 @@ class PhoneLogin extends StatelessWidget {
                 thickness: 2.0,
               ),
               Padding(
-                padding: const EdgeInsets.all(6.0),
+                padding: const EdgeInsets.all(10.0),
                 child: SizedBox(
                   height: 40,
-                  width: 330,
+                  width: 350,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ChooseLanguage(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.zero,

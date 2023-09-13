@@ -1,4 +1,4 @@
-import 'package:flipkart/src/presentation/views/my_rewards/my_rewards.dart';
+import 'package:flipkart/src/presentation/views/phone_login/phone_login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
     return const MaterialApp(
       title: 'Flipkart',
       debugShowCheckedModeBanner: false,
-      home: MyRewards(),
+      home: PhoneLogin(),
     );
   }
 }

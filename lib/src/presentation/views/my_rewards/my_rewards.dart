@@ -1,3 +1,4 @@
+import 'package:flipkart/src/presentation/views/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/cupertino.dart';
@@ -40,7 +41,9 @@ class _MyRewardsState extends State<MyRewards> {
             size: 16,
             color: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()));
+          },
         ),
         actions: [
           InkWell(
